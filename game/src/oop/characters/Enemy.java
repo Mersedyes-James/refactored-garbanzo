@@ -17,6 +17,11 @@ public class Enemy extends Character {
         System.out.println("Used Special Attack for " + spAttackDamage + " damage");
     }
 
+    @Override
+    public void defend() {
+
+    }
+
     public void spDefend() {
         System.out.println("Used special defend to avoid all damage!");
     }

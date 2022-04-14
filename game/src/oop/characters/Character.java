@@ -49,21 +49,18 @@ public abstract class Character implements Attackable, Defendable, Rollable {
         }
     }
 
+    private int attackResult;
+
     public void attackRoll(){
             int min = 1;
             int range = 20;
             int rand = (int) (Math.random() * range) + min;
 
             System.out.println("Attacker rolled a : " + rand);
+            attackResult = rand;
         }
 
-//    public void defend() {
-//        if (attackRoll > defenseValue + baseDefenseValue) {
-//            System.out.println("Enemy rolled a " + attackRoll + " and your defense is " + (defenseValue + baseDefenseValue) + ". HIT!");
-//        } else {
-//            System.out.println("Enemy rolled a " + attackRoll + " and your defense is " + (defenseValue + baseAttackDamage) + ". MISSED!");
-//        }
-//    }
+    private int defenseResult;
 
     public void defenseRoll(){
             int min = 1;
@@ -71,7 +68,18 @@ public abstract class Character implements Attackable, Defendable, Rollable {
             int rand = (int) (Math.random() * range) + min;
 
         System.out.println("Defender rolled a: " + rand);
+        defenseResult = rand;
     }
 
-    Boolean compare(defenseRoll, attackRoll)
+    private boolean attackHits;
+
+    public void compare(){
+        if(attackResult - defenseValue > defenseResult) {
+            attackHits = true;
+        } else {
+            attackHits = false;
+        }
+    }
+
+
 }

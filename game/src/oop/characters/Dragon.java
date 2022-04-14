@@ -3,7 +3,7 @@ package oop.characters;
 public class Dragon extends Enemy{
 
     public Dragon() {
-        super(200, 100, 10);
+        super(200, 100, 5);
     }
 
     public void fly() {
