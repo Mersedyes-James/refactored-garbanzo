@@ -20,7 +20,7 @@ public class GameRunner {
         } else if (heroChoice.equalsIgnoreCase("knight")) {
             hero = new Knight("Knight");
         }else {
-            hero = new Mage(2000, 150, "zappy boi aka Samuel Moore");
+            hero = new Mage(2000, 150, 5, "zappy boi aka Samuel Moore");
         }
 
         hero.attack();
