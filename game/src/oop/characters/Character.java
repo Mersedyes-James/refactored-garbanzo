@@ -2,7 +2,7 @@ package oop.characters;
 
 import static oop.characters.Defendable.baseDefenseValue;
 
-public abstract class Character implements Attackable {
+public abstract class Character implements Attackable, Defendable, Rollable {
 
     //    PROPERTIES ALL CHARACTERS SHARE
     protected int hp;
@@ -49,6 +49,14 @@ public abstract class Character implements Attackable {
         }
     }
 
+    public void attackRoll(){
+            int min = 1;
+            int range = 20;
+            int rand = (int) (Math.random() * range) + min;
+
+            System.out.println("Attacker rolled a : " + rand);
+        }
+
 //    public void defend() {
 //        if (attackRoll > defenseValue + baseDefenseValue) {
 //            System.out.println("Enemy rolled a " + attackRoll + " and your defense is " + (defenseValue + baseDefenseValue) + ". HIT!");
@@ -57,4 +65,13 @@ public abstract class Character implements Attackable {
 //        }
 //    }
 
+    public void defenseRoll(){
+            int min = 1;
+            int range = 20;
+            int rand = (int) (Math.random() * range) + min;
+
+        System.out.println("Defender rolled a: " + rand);
+    }
+
+    Boolean compare(defenseRoll, attackRoll)
 }
