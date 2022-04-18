@@ -23,7 +23,7 @@ public class Hero extends Character {
 
     @Override
     public void defend() {
-
+        System.out.println("DEFENSE!");
     }
 
     public void spDefend(){

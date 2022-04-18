@@ -13,17 +13,17 @@ public class GameRunner {
     public static void main(String[] args) {
         String heroChoice = Input.getString("Welcome! Please select a hero(Warrior/Knight): ");
 
-        Attackable hero;
+        Character hero;
 
         if (heroChoice.equalsIgnoreCase("warrior")) {
             hero = new Warrior("Warrior");
         } else if (heroChoice.equalsIgnoreCase("knight")) {
             hero = new Knight("Knight");
         }else {
-            hero = new Mage(2000, 150, 5, "zappy boi aka Samuel Moore");
+            hero = new Mage(2000, 150, 5, "Zappy Boi aka Samuel Moore");
         }
 
-        hero.attack();
+
 
     }
 

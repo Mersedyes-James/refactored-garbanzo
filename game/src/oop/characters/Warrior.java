@@ -12,4 +12,9 @@ public class Warrior extends Hero {
     public void attack() {
         System.out.println("Warrior attack!");
     }
+
+    public void defend() {
+        System.out.println("DEFENSIVE WARRIOR");
+    }
 }
+

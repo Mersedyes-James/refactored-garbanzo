@@ -49,37 +49,42 @@ public abstract class Character implements Attackable, Defendable, Rollable {
         }
     }
 
-    private int attackResult;
-
-    public void attackRoll(){
-            int min = 1;
-            int range = 20;
-            int rand = (int) (Math.random() * range) + min;
-
-            System.out.println("Attacker rolled a : " + rand);
-            attackResult = rand;
-        }
-
-    private int defenseResult;
-
-    public void defenseRoll(){
-            int min = 1;
-            int range = 20;
-            int rand = (int) (Math.random() * range) + min;
-
-        System.out.println("Defender rolled a: " + rand);
-        defenseResult = rand;
+    @Override
+    public void defend() {
+        System.out.println("DEFENSIVE CHARACTER");
     }
 
-    private boolean attackHits;
-
-    public void compare(){
-        if(attackResult - defenseValue > defenseResult) {
-            attackHits = true;
-        } else {
-            attackHits = false;
-        }
-    }
+//    private int attackResult;
+//
+//    public void attackRoll(){
+//            int min = 1;
+//            int range = 20;
+//            int rand = (int) (Math.random() * range) + min;
+//
+//            System.out.println("Attacker rolled a : " + rand);
+//            attackResult = rand;
+//        }
+//
+//    private int defenseResult;
+//
+//    public void defenseRoll(){
+//            int min = 1;
+//            int range = 20;
+//            int rand = (int) (Math.random() * range) + min;
+//
+//        System.out.println("Defender rolled a: " + rand);
+//        defenseResult = rand;
+//    }
+//
+//    private boolean attackHits;
+//
+//    public void compare(){
+//        if(attackResult - defenseValue > defenseResult) {
+//            attackHits = true;
+//        } else {
+//            attackHits = false;
+//        }
+//    }
 
 
 }
